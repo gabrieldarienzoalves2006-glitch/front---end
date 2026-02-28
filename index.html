@@ -1,75 +1,102 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Cantinho Colecionável</title>
+    <title>Material de Estudo: ENGENHARIA DE SOFTWARE</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
-        header { background: #2e2e89; color: #32c098; padding: 10px; text-align: center; }
-        .colecao { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; }
-        .item { border: 1px solid #d01616; padding: 15px; width: 30%; box-shadow: 2px 2px 5px #544d7b; }
-        img { max-width: 100%; height: auto; }
+        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; background-color: #f4f4f9; }
+        header { background: #c2a7a7; color: #efeb13; padding: 1rem; text-align: center; }
+        section { background: #c5c4cd; padding: 20px; margin-top: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+        th, td { border: 1px solid #23d19c; padding: 8px; text-align: left; }
+        th { background-color: #1dc60a; }
+        img { max-width: 100%; height: auto; border-radius: 4px; }
+        form { display: flex; flex-direction: column; gap: 10px; }
+        button { cursor: pointer; background: #28a745; color: rgb(91, 20, 167); border: none; padding: 10px; border-radius: 4px; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Artigos de Colecionador Raros</h1>
-        <h1> Items para os apaixonados por video games</h1>
-        <h2> Os consoles estão em nossas vidas desde de seus primeiros lançamemtos, venha conhecer a nossa web de video games nostalgicos para você colecionar.
-        
-    </header>
+<header>
+    <h1>Introdução Redes de computadores</h1>
+    <p>Disciplina: ENGENHARIA DE SOFTWARE</p>
+</header>
 
-    <main>
-        <section>
-            <h2>Itens em Destaque</h2>
-            <div class="colecao">
-                <!-- Item 1 -->
-                <article class="item">
-                    <img src="image.png" alt="nintendo 64">
-                    <td>R$ 6.100,00</td>
-                    <h3>Edição Limitada</h3>
-                    <p><strong>Ano:</strong> 1996</p>
-                    <p>O primeiro de todos.</p>
-                </article>
+<section>
+    <h2>O que é Rede de computadores?</h2>
+    <p>Uma <strong>Rede de computadores</strong> são sistemas compostos por dois ou mais dispositivos (computadores, servidores, celulares) interconectados por meios físicos (cabos) ou sem fio (Wi-Fi), com o objetivo de compartilhar informações, dados e recursos, como impressoras e arquivos. Eles permitem troca de mensagens, acesso à internet e colaboração remota.
+    <h3>Componentes de uma Rede:</h3>
+    <ul>
+        <li><strong>Data:</strong> Conexão de mais de uma rede.</li>
+        <li><strong>Next:</strong> PAN (Personal Area Network): Rede de área pessoal, curto alcance (ex: Bluetooth).
+LAN (Local Area Network): Rede local, abrange uma casa ou escritório.
+MAN (Metropolitan Area Network): Rede metropolitana, cobre uma cidade.
+WAN (Wide Area Network): Rede de longa distância, abrange países ou o globo (ex: Internet).</li>
+    </ul>
 
-                <!-- Item 2 -->
-                <article class="item">
-                    <img src="image copy.png" alt="playstation 2">
-                    <td>R$ 5.800,00</td>
-                    <h3>Um console que faz você se sentir a saudade.</h3>
-                    <p><strong>Raridade:</strong> média</p>
-                    <p><strong>Ano:</strong> 2000</p>
-                    <p>console impecável.</p>
-                </article>
+    <figure>
+        <img src="image.png" alt="Rede de computadores">
+        <figcaption>Representação visual de uma Conexão de compiutadores. Fonte: <a href="https://pt.wikipedia.org/wiki/Rede_de_computadores" target="_blank">Wikipedia</a>.</figcaption>
+    </figure>
+</section>
 
-                <!-- Item 3 -->
-                <article class="item">
-                    <img src="image copy 2.png" alt="Xbox 360">
-                    <td>R$ 4.800,00</td>
-                    <h3>Edição #1</h3>
-                    <p><strong>Estado:</strong> inteiro</p>
-                    <p><strong>Ano:</strong> 2005</p>
-                    <p> clássico.</p>
-                </article> 
-            </div>
-        </section>
-    </main>
+<section>
+    <h2>Comparativo: Engenharia de Software</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Característica</th>
+                <th>LAN</th>
+                <th>MAN</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tamanho</td>
+                <td>Fixo</td>
+                <td>Dinâmico</td>
+            </tr>
+            <tr>
+                <td>Inserção/Remoção</td>
+                <td>Custo alto (shift)</td>
+                <td>Custo baixo (ponteiros)</td>
+            </tr>
+            <tr>
+                <td>Acesso</td>
+                <td>Aleatório (O(1))</td>
+                <td>Sequencial (O(n))</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
 
-    <footer>
-        <p>&copy; 2026 - Meu Cantinho Colecionável</p>
-    </footer>
+<section>
+    <h2>🚀 Teste seu Conhecimento</h2>
+    <p>Responda ao formulário abaixo para validar seu aprendizado:</p>
+    
+    <form action="#" method="POST">
+        <label for="nome">Nome do Estudante:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label>Qual é a diferença entre LAN(Local Area Network) e MAN(Metropolitan Area Network)</label>
+        <div>
+            <input type="radio" id="q1a" name="vantagem" value="acesso">
+            <label for="q1a">Acesso mais rápido aos elementos.</label><br>
+            <input type="radio" id="q1b" name="vantagem" value="dinamico">
+            <label for="q1b">Facilidade em redimensionar e inserir dados.</label>
+        </div>
+
+        <label for="feedback">Dúvidas ou Comentários:</label>
+        <textarea id="feedback" name="feedback" rows="4"></textarea>
+
+        <button type="submit">Enviar Respostas</button>
+    </form>
+</section>
+
+<footer>
+    <p style="text-align: center; font-size: 0.8em;">Material produzido para fins acadêmicos - 2026.</p>
+</footer>
 
 </body>
 </html>
-
-<footer> Respire, jogue e repita. Vivenciam o velho mundo em que os antigos eram melhores que os modernos, os gráficos podem ser ruims e de baixa qualidade, mas é uma experiencia incrivel.</footer>
-<a href="https://www.youtube.com/watch?v=RWrWuXE6RHw" target="_blank">Assistir Trailer do nintendo 64</a>
-
-<a href="https://www.youtube.com/watch?v=Hvcps5dFzfc" target="_blank">Assistir Trailer do playstation 2</a>
-
-<a href="https://www.youtube.com/watch?v=Hvcps5dFzfc" target="_blank">Assistir Trailer do Xbox 360</a>
-
-
-<body style="background-color: #2355a0c8;"></body>
