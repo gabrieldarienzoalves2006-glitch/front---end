@@ -1,0 +1,63 @@
+/* Configurações Globais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container Principal */
+main, .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Cabeçalhos */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #2980b9;
+    margin-top: 25px;
+}
+
+/* Estilização de Listas e Dados */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #ecf0f1;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-left: 5px solid #3498db;
+    border-radius: 4px;
+}
+
+/* Destaque para termos técnicos */
+code, span.tech {
+    background: #fdf6e3;
+    color: #d33682;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Rodapé ou notas */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #7f8c8d;
+}

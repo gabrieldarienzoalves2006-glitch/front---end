@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquivo Moderno da Computação</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #4da3ff;
+            --secondary: #6c63ff;
+            --bg-dark: #0f172a;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(77, 163, 255, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(108, 99, 255, 0.15) 0px, transparent 50%);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(to right, #4da3ff, #b794f4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        header p {
+            color: var(--text-dim);
+            font-size: 1.1rem;
+        }
+
+        /* MENU NAVEGAÇÃO */
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            position: sticky;
+            top: 20px;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            padding: 8px;
+            border-radius: 50px;
+            list-style: none;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        nav ul li a {
+            color: var(--text-dim);
+            text-decoration: none;
+            padding: 10px 25px;
+            display: block;
+            border-radius: 40px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        nav ul li a:hover {
+            color: white;
+        }
+
+        nav ul li a.active {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(77, 163, 255, 0.4);
+        }
+
+        /* CONTEÚDO */
+        main {
+            max-width: 800px;
+            margin: auto;
+            padding: 0 20px 60px;
+        }
+
+        .tab-content {
+            display: none;
+            animation: slideUp 0.5s ease forwards;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        section h2::after {
+            content: "";
+            height: 2px;
+            flex-grow: 1;
+            background: linear-gradient(to right, var(--primary), transparent);
+        }
+
+        /* CARDS ESTILIZADOS */
+        article {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 16px;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        article:hover {
+            transform: scale(1.02);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--primary);
+        }
+
+        article h3 {
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-size: 1.4rem;
+        }
+
+        article p {
+            color: var(--text-dim);
+        }
+
+        /* TABELA MODERNA */
+        .table-container {
+            overflow-x: auto;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            text-align: left;
+        }
+
+        table th {
+            background: rgba(77, 163, 255, 0.1);
+            color: var(--primary);
+            padding: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        table td {
+            padding: 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+        }
+
+        table tr:last-child td {
+            border-bottom: none;
+        }
+
+        table tr:hover td {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* RESPONSIVIDADE */
+        @media(max-width:600px) {
+            header h1 { font-size: 2rem; }
+            nav ul { width: 100%; border-radius: 20px; }
+            nav ul li { flex: 1; text-align: center; }
+            nav ul li a { padding: 10px 5px; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Computer Archives</h1>
+        <p>Explorando os bits e bytes que moldaram o mundo.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a onclick="openTab(event, 'pioneiros')" class="tab-link active">Pioneiros</a></li>
+            <li><a onclick="openTab(event, 'bugs')" class="tab-link">Bugs</a></li>
+            <li><a onclick="openTab(event, 'linguagens')" class="tab-link">Linguagens</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="pioneiros" class="tab-content active">
+            <h2>Os Visionários</h2>
+            <article>
+                <h3>Ada Lovelace</h3>
+                <p>Matemática e escritora inglesa, reconhecida por ter escrito o primeiro algoritmo a ser processado por uma máquina.</p>
+            </article>
+            <article>
+                <h3>Alan Turing</h3>
+                <p>Pai da ciência da computação teórica e inteligência artificial. Decifrou códigos nazistas na 2ª Guerra Mundial.</p>
+            </article>
+        </section>
+
+        <section id="bugs" class="tab-content">
+            <h2>Histórias de Debugging</h2>
+            <article>
+                <h3>O Inseto de Grace Hopper</h3>
+                <p>Em 9 de setembro de 1947, uma mariposa literal causou uma falha no computador Harvard Mark II. O termo "bug" nunca mais foi o mesmo.</p>
+            </article>
+        </section>
+
+        <section id="linguagens" class="tab-content">
+            <h2>Timeline de Linguagens</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Linguagem</th>
+                            <th>Lançamento</th>
+                            <th>Uso Principal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>COBOL</strong></td>
+                            <td>1959</td>
+                            <td>Sistemas Bancários</td>
+                        </tr>
+                        <tr>
+                            <td><strong>C</strong></td>
+                            <td>1972</td>
+                            <td>Sistemas Operacionais</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Python</strong></td>
+                            <td>1991</td>
+                            <td>IA e Dados</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 — Criado com ❤️ para entusiastas da tecnologia</p>
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            const contents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < contents.length; i++) {
+                contents[i].classList.remove("active");
+            }
+
+            const links = document.getElementsByClassName("tab-link");
+            for (let i = 0; i < links.length; i++) {
+                links[i].classList.remove("active");
+            }
+
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+            
+            // Scroll suave para o topo do conteúdo ao trocar de aba no mobile
+            if(window.innerWidth < 600) {
+                window.scrollTo({top: 150, behavior: 'smooth'});
+            }
+        }
+    </script>
+
+</body>
+</html>
