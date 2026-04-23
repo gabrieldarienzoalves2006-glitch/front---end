@@ -1,0 +1,53 @@
+/* Questão 02 - Estilização */
+body {
+    background-color: #1674d1; /* Cor de fundo suave */
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #8195ab;
+    padding: 5px 10px;
+}
+
+/* Estilização de classe para as seções */
+.secao-copa {
+    background: #ffffff; /* Fundo suave para cada seção */
+    border-radius: 15px; /* Arredondamento */
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.secao-copa h2 {
+    font-size: 24px; /* Destaque nos títulos */
+    color: #2c3e50;
+    text-align: left;
+    margin-top: 0;
+}
+
+.secao-copa p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
